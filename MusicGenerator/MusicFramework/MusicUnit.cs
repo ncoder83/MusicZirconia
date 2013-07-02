@@ -1,29 +1,36 @@
-﻿using MusicGenerator.MusicFramework.TheoryFramework;
+﻿using MusicGenerator.MidiIntegration.MidiSignals;
+using MusicGenerator.MusicFramework.TheoryFramework;
+using System;
 using System.Collections.Generic;
 
 namespace MusicGenerator.MusicFramework
 {
-    public class MusicUnit
+    public class MusicUnit : IComparable<MusicUnit>
     {
         public readonly int Tick;
-        public readonly Chord ChordOn;
-        public readonly Chord ChordOff;
-        public readonly double Sustainlevel;
+        private List<MidiSignal> midiSignals;
 
-        public MusicUnit(int tick, Chord chordOn, Chord chordOff, double sustainlevel)
+        public IEnumerable<MidiSignal> Signals { get { return midiSignals; } }
+
+        public MusicUnit(int tick, List<MidiSignal> midiSignals)
         {
             this.Tick = tick;
-            this.ChordOn = chordOn;
-            this.ChordOff = chordOff;
-            this.Sustainlevel = sustainlevel;
+            this.midiSignals = midiSignals;
         }
-    }
 
-    public class MusicUnitTickComparer : IComparer<MusicUnit>
-    {
-        public int Compare(MusicUnit mu1, MusicUnit mu2)
+        public void AddSignal(MidiSignal signal)
         {
-            return mu1.Tick - mu2.Tick;
+            this.midiSignals.Add(signal);
+        }
+
+        public void Union(MusicUnit other)
+        {
+            midiSignals.AddRange(other.Signals);
+        }
+
+        public int CompareTo(MusicUnit other)
+        {
+            return Tick - other.Tick;
         }
     }
 }

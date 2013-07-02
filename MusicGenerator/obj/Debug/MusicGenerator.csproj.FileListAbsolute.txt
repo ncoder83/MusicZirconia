@@ -20,3 +20,10 @@ D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\bin\Debu
 D:\Projects\MusicZirconia\MusicGenerator\bin\Debug\MusicGenerator.exe.config
 D:\Projects\MusicZirconia\MusicGenerator\obj\Debug\MusicGenerator.exe
 D:\Projects\MusicZirconia\MusicGenerator\obj\Debug\MusicGenerator.pdb
+D:\Projects\MusicZirconia\MusicGenerator\obj\Debug\MusicGenerator.csprojResolveAssemblyReference.cache
+D:\Projects\MusicZirconia\MusicGenerator\obj\Debug\MusicGenerator.Form1.resources
+D:\Projects\MusicZirconia\MusicGenerator\obj\Debug\MusicGenerator.Properties.Resources.resources
+D:\Projects\MusicZirconia\MusicGenerator\obj\Debug\MusicGenerator.csproj.GenerateResource.Cache
+D:\Projects\MusicZirconia\MusicGenerator\bin\Debug\MusicGenerator.exe
+D:\Projects\MusicZirconia\MusicGenerator\bin\Debug\MusicGenerator.pdb
+D:\Projects\MusicZirconia\MusicGenerator\bin\Debug\Midi.dll

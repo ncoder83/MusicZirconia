@@ -3,6 +3,7 @@ using MusicGenerator.MusicFramework;
 using MusicGenerator.MusicFramework.TheoryFramework;
 using System.Timers;
 using System;
+using MusicGenerator.MidiIntegration.MidiSignals;
 
 namespace MusicGenerator.MusicPlaying
 {
@@ -39,17 +40,9 @@ namespace MusicGenerator.MusicPlaying
             if (musicUnit == null)
                 return;
 
-            if(musicUnit.Sustainlevel != -1)
-                midiIntegrationFacade.SetSustain(musicUnit.Sustainlevel);
-
-            foreach (Note note in musicUnit.ChordOff.Notes)
+            foreach(MidiSignal signal in musicUnit.Signals)
             {
-                midiIntegrationFacade.NoteOff(note);
-            }
-
-            foreach(Note note in musicUnit.ChordOn.Notes)
-            {
-                midiIntegrationFacade.NoteOn(note);
+                midiIntegrationFacade.FireSignal(signal);
             }
         }
 

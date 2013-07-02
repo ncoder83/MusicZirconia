@@ -1,4 +1,5 @@
-﻿using MusicGenerator.MusicFramework.TheoryFramework;
+﻿using MusicGenerator.MidiIntegration.MidiSignals;
+using MusicGenerator.MusicFramework.TheoryFramework;
 
 namespace MusicGenerator.MidiIntegration
 {
@@ -12,19 +13,9 @@ namespace MusicGenerator.MidiIntegration
             this.outputDevice = outputDevice;
         }
 
-        public void NoteOn(Note note)
+        public void FireSignal(MidiSignal signal)
         {
-            outputDevice.SendNoteOn(midiChannel, MidiHelper.Instance.GetMidiPitch(note), MidiHelper.Instance.GetMidiVelocity(note));
-        }
-
-        public void NoteOff(Note note)
-        {
-            outputDevice.SendNoteOff(midiChannel, MidiHelper.Instance.GetMidiPitch(note), MidiHelper.Instance.GetMidiVelocity(note));
-        }
-
-        public void SetSustain(double value)
-        {
-            outputDevice.SendControlChange(Midi.Channel.Channel1, Midi.Control.SustainPedal, MidiHelper.Instance.GetMidiSustain(value));
+            signal.Fire(outputDevice, midiChannel);
         }
     }
 }

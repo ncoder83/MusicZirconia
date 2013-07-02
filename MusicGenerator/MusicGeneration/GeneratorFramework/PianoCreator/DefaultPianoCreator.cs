@@ -7,7 +7,6 @@ namespace MusicGenerator.MusicGeneration.GeneratorFramework.PianoCreator
     {
         public void CreateMusic(MusicStream stream)
         {
-            stream.Sustain();
             stream.PlayNotes(new Note(Key.B, 3, .7, Duration.Quarter));
             stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Quarter));
             stream.IncrementTick(Duration.Quarter);
@@ -110,7 +109,6 @@ namespace MusicGenerator.MusicGeneration.GeneratorFramework.PianoCreator
             stream.PlayNotes(new Note(Key.D, 4, .7, Duration.Half));
             stream.PlayNotes(new Note(Key.D, 5, .7, Duration.Half));
             stream.IncrementTick(Duration.Half);
-            stream.ReleaseSustain();
         }
     }
 }

@@ -8,8 +8,8 @@ namespace MusicGenerator.MusicFramework
     {
         public MusicStream GetMusicStream()
         {
-            ChordFactory chordFactory = new ChordFactory();
-            return new MusicStream(new PriorityQueue<MusicUnit>(new MusicUnitTickComparer()), chordFactory);
+            MusicUnitFactory musicUnitFactory = new MusicUnitFactory();
+            return new MusicStream(new MusicUnitMap(new Dictionary<int, MusicUnit>()), musicUnitFactory);
         }
     }
 }

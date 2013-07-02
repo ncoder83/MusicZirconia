@@ -8,3 +8,11 @@ D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\obj
 D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\obj\Debug\MusicGeneratorTests.pdb
 D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\Midi.dll
 D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\C5.dll
+D:\Projects\MusicZirconia\MusicGeneratorTests\bin\Debug\MusicGeneratorTests.dll
+D:\Projects\MusicZirconia\MusicGeneratorTests\bin\Debug\MusicGeneratorTests.pdb
+D:\Projects\MusicZirconia\MusicGeneratorTests\bin\Debug\MusicGenerator.exe
+D:\Projects\MusicZirconia\MusicGeneratorTests\bin\Debug\Midi.dll
+D:\Projects\MusicZirconia\MusicGeneratorTests\bin\Debug\MusicGenerator.pdb
+D:\Projects\MusicZirconia\MusicGeneratorTests\obj\Debug\MusicGeneratorTests.csprojResolveAssemblyReference.cache
+D:\Projects\MusicZirconia\MusicGeneratorTests\obj\Debug\MusicGeneratorTests.dll
+D:\Projects\MusicZirconia\MusicGeneratorTests\obj\Debug\MusicGeneratorTests.pdb

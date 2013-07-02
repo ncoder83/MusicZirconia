@@ -28,8 +28,8 @@ namespace MusicGenerator.MusicFramework.TheoryFramework
         F = 5,
         FSharp = 6,
         FSharpSharp = 7,
-        GFlat = 5,
-        GFlatFlat = 6,
+        GFlatFlat = 5,
+        GFlat = 6,
         G = 7,
         GSharp = 8,
         GSharpSharp = 9,
@@ -60,7 +60,7 @@ namespace MusicGenerator.MusicFramework.TheoryFramework
             {
                 int val = ((octave + 1) * 12 + (int)key);
                 if (val < 0 || val > 127)
-                    throw new Exception(String.Format("Key: {0}{1} invalid", val, octave));
+                    throw new Exception(String.Format("Key: {0}{1} out of range", val, octave));
                 return (Pitch)val;
             }
         }   

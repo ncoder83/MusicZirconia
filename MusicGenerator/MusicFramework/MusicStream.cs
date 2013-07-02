@@ -1,5 +1,7 @@
 ﻿using MusicGenerator.Common;
+using MusicGenerator.MidiIntegration.MidiSignals;
 using MusicGenerator.MusicFramework.TheoryFramework;
+using System;
 using System.Collections.Generic;
 
 namespace MusicGenerator.MusicFramework
@@ -8,36 +10,51 @@ namespace MusicGenerator.MusicFramework
     public class MusicStream
     {
         private int tick;
-        private PriorityQueue<MusicUnit> musicUnitQueue;
-        private ChordFactory chordFactory;
+        private MusicUnitMap musicUnitMap;
+        private MusicUnitFactory musicUnitFactory;
 
-        public MusicStream(PriorityQueue<MusicUnit> musicUnitQueue, ChordFactory chordFactory)
+        public MusicStream(MusicUnitMap musicUnitMap, MusicUnitFactory musicUnitFactory)
         {
-            this.musicUnitQueue = musicUnitQueue;
-            this.chordFactory = chordFactory;
-            tick = 0;
+            this.musicUnitMap = musicUnitMap;
+            this.musicUnitFactory = musicUnitFactory;
+            tick = 4;
         }
 
-        public bool IsEmpty { get { return musicUnitQueue.IsEmpty; } }
+        public bool IsEmpty { get { return musicUnitMap.IsEmpty; } }
 
         public void PlayNotes(params Note[] notes)
         {
-            Chord chord = chordFactory.GetChord(notes);
-            musicUnitQueue.Enqueue(new MusicUnit(tick, chordFactory.GetChord(notes), chordFactory.GetEmptyChord(), -1));
+            MusicUnit noteOn = musicUnitFactory.GetMusicUnit(tick);
             foreach(Note note in notes)
             {
-                musicUnitQueue.Enqueue(new MusicUnit(tick + note.Duration - 1, chordFactory.GetEmptyChord(), chordFactory.GetChord(note), -1));
+                musicUnitMap.Add(musicUnitFactory.GetMusicUnit(tick, new NoteOnSignal(note)));
+                musicUnitMap.Add(musicUnitFactory.GetMusicUnit(tick + note.Duration - 1, new NoteOffSignal(note)));
             }
+        }
+
+        public void SendSignal(MidiSignal signal)
+        {
+            musicUnitMap.Add(musicUnitFactory.GetMusicUnit(tick, signal));
+        }
+
+        public void SendDelayedSignal(MidiSignal signal, Duration duration)
+        {
+            SendDelayedSignal(signal, (int)duration);
+        }
+
+        public void SendDelayedSignal(MidiSignal signal, int duration)
+        {
+            musicUnitMap.Add(musicUnitFactory.GetMusicUnit(tick + duration - 1, signal));
         }
 
         public void Sustain()
         {
-             musicUnitQueue.Enqueue(new MusicUnit(tick, chordFactory.GetEmptyChord(), chordFactory.GetEmptyChord(), 1));
+            musicUnitMap.Add(musicUnitFactory.GetMusicUnit(tick, new SustainSignal(1)));
         }
 
         public void ReleaseSustain()
         {
-            musicUnitQueue.Enqueue(new MusicUnit(tick, chordFactory.GetEmptyChord(), chordFactory.GetEmptyChord(), 0));
+            musicUnitMap.Add(musicUnitFactory.GetMusicUnit(tick, new SustainSignal(0)));
         }
 
         public void IncrementTick(Duration duration)
@@ -50,32 +67,25 @@ namespace MusicGenerator.MusicFramework
             tick += duration;
         }
 
+        public void DecrementTick(Duration duration)
+        {
+            DecrementTick((int)duration);
+        }
+
+        public void DecrementTick(int duration)
+        {
+            tick -= duration;
+            tick = Math.Max(tick, 0);
+        }
+
         public void Reset()
         {
-            tick = 0;
+            tick = 4;
         }
 
         public MusicUnit GetMusicUnit()
         {
-            while (!musicUnitQueue.IsEmpty && musicUnitQueue.Peek().Tick < tick)
-                musicUnitQueue.Dequeue();
-
-            if (musicUnitQueue.IsEmpty || tick != musicUnitQueue.Peek().Tick)
-                return null;
-
-            List<MusicUnit> musicUnitList = new List<MusicUnit>();
-            while (!musicUnitQueue.IsEmpty && musicUnitQueue.Peek().Tick == tick)
-                musicUnitList.Add(musicUnitQueue.Dequeue());
-
-            if (musicUnitList.Count == 0)
-                return null;
-            if (musicUnitList.Count == 1)
-                return musicUnitList[0];
-            MusicUnit musicUnit = musicUnitList[0];
-            for (int i = 1; i < musicUnitList.Count; i++)
-                musicUnit = MusicHelper.Instance.Union(musicUnit, musicUnitList[i]);
-
-            return musicUnit;
+            return musicUnitMap.Get(tick);
         }
     }
 }
