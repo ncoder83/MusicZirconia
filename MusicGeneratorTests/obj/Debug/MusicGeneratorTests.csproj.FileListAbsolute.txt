@@ -1,0 +1,10 @@
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\MusicGeneratorTests.dll
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\MusicGeneratorTests.pdb
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\CSharpSynth.dll
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\MusicGenerator.exe
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\MusicGenerator.pdb
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\obj\Debug\MusicGeneratorTests.csprojResolveAssemblyReference.cache
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\obj\Debug\MusicGeneratorTests.dll
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\obj\Debug\MusicGeneratorTests.pdb
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\Midi.dll
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGeneratorTests\bin\Debug\C5.dll

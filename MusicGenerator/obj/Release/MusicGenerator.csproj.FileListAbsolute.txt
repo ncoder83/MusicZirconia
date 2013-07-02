@@ -1,0 +1,11 @@
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\bin\Release\MusicGenerator.exe.config
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\bin\Release\MusicGenerator.exe
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\bin\Release\MusicGenerator.pdb
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\bin\Release\C5.dll
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\bin\Release\Midi.dll
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\obj\Release\MusicGenerator.csprojResolveAssemblyReference.cache
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\obj\Release\MusicGenerator.Form1.resources
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\obj\Release\MusicGenerator.Properties.Resources.resources
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\obj\Release\MusicGenerator.csproj.GenerateResource.Cache
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\obj\Release\MusicGenerator.exe
+D:\Projects\MusicHelperWorkspace\Projects\MusicGenerator\MusicGenerator\obj\Release\MusicGenerator.pdb
