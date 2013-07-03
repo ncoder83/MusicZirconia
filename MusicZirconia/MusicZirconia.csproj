@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A432C92-D8C5-44C5-B39B-26FCCF0E94B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MusicZirconia</RootNamespace>
+    <AssemblyName>MusicZirconia</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Midi">
+      <HintPath>..\lib\Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DoubleExtensions.cs" />
+    <Compile Include="MidiIntegration\MidiSignals\MidiSignal.cs" />
+    <Compile Include="MidiIntegration\MidiSignals\NoteOffSignal.cs" />
+    <Compile Include="MidiIntegration\MidiSignals\NoteOnSignal.cs" />
+    <Compile Include="MidiIntegration\MidiSignals\SustainSignal.cs" />
+    <Compile Include="MusicFramework\MusicUnitQueue.cs" />
+    <Compile Include="MusicFramework\MusicUnitFactory.cs" />
+    <Compile Include="MusicFramework\TheoryFramework\ChordFactory.cs" />
+    <Compile Include="MidiIntegration\MidiHelper.cs" />
+    <Compile Include="MidiIntegration\MidiIntegrationFacade.cs" />
+    <Compile Include="MidiIntegration\MidiIntegrationFacadeFactory.cs" />
+    <Compile Include="MusicFramework\TheoryFramework\Chord.cs" />
+    <Compile Include="MusicFramework\TheoryFramework\Duration.cs" />
+    <Compile Include="MusicFramework\TheoryFramework\Key.cs" />
+    <Compile Include="MusicFramework\TheoryFramework\Note.cs" />
+    <Compile Include="MusicFramework\TheoryFramework\Pitch.cs" />
+    <Compile Include="MusicGeneration\GeneratorFramework\IMusicCreator.cs" />
+    <Compile Include="MusicGeneration\GeneratorFramework\MusicCreatorFactory.cs" />
+    <Compile Include="MusicGeneration\GeneratorFramework\PianoCreator\DefaultPianoCreator.cs" />
+    <Compile Include="MusicFramework\MusicStreamFactory.cs" />
+    <Compile Include="MusicFramework\MusicUnit.cs" />
+    <Compile Include="MusicGeneration\MusicGenerationFacade.cs" />
+    <Compile Include="MusicGeneration\MusicGenerationFacadeFactory.cs" />
+    <Compile Include="MusicGeneration\MusicGenerator.cs" />
+    <Compile Include="MusicFramework\MusicStream.cs" />
+    <Compile Include="MusicPlaying\MusicDispatcher.cs" />
+    <Compile Include="MusicPlaying\MusicDispatcherFactory.cs" />
+    <Compile Include="MusicPlaying\MusicPlayer.cs" />
+    <Compile Include="MusicPlaying\MusicPlayingFacade.cs" />
+    <Compile Include="MusicPlaying\MusicPlayingFacadeFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

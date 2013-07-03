@@ -1,11 +1,6 @@
-﻿using MusicGenerator.MusicGeneration;
-using MusicGenerator.MusicFramework;
-using MusicGenerator.MusicPlaying;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MusicZirconia.MusicFramework;
+using MusicZirconia.MusicGeneration;
+using MusicZirconia.MusicPlaying;
 
 namespace MusicGenerator.UIAbstraction
 {

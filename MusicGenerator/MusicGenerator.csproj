@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A432C92-D8C5-44C5-B39B-26FCCF0E94B7}</ProjectGuid>
+    <ProjectGuid>{EF0A0F37-3781-4460-A69F-1CCF3B2C6DD2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MusicGenerator</RootNamespace>
@@ -31,14 +31,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MusicGenerator.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Midi">
-      <HintPath>..\lib\Midi.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -46,43 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\DoubleExtensions.cs" />
-    <Compile Include="MidiIntegration\MidiSignals\MidiSignal.cs" />
-    <Compile Include="MidiIntegration\MidiSignals\NoteOffSignal.cs" />
-    <Compile Include="MidiIntegration\MidiSignals\NoteOnSignal.cs" />
-    <Compile Include="MidiIntegration\MidiSignals\SustainSignal.cs" />
-    <Compile Include="MusicFramework\MusicUnitQueue.cs" />
-    <Compile Include="MusicFramework\MusicUnitFactory.cs" />
-    <Compile Include="MusicFramework\TheoryFramework\ChordFactory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MidiIntegration\MidiHelper.cs" />
-    <Compile Include="MidiIntegration\MidiIntegrationFacade.cs" />
-    <Compile Include="MidiIntegration\MidiIntegrationFacadeFactory.cs" />
-    <Compile Include="MusicFramework\TheoryFramework\Chord.cs" />
-    <Compile Include="MusicFramework\TheoryFramework\Duration.cs" />
-    <Compile Include="MusicFramework\TheoryFramework\Key.cs" />
-    <Compile Include="MusicFramework\TheoryFramework\Note.cs" />
-    <Compile Include="MusicFramework\TheoryFramework\Pitch.cs" />
-    <Compile Include="MusicGeneration\GeneratorFramework\IMusicCreator.cs" />
-    <Compile Include="MusicGeneration\GeneratorFramework\MusicCreatorFactory.cs" />
-    <Compile Include="MusicGeneration\GeneratorFramework\PianoCreator\DefaultPianoCreator.cs" />
-    <Compile Include="MusicFramework\MusicStreamFactory.cs" />
-    <Compile Include="MusicFramework\MusicUnit.cs" />
-    <Compile Include="MusicGeneration\MusicGenerationFacade.cs" />
-    <Compile Include="MusicGeneration\MusicGenerationFacadeFactory.cs" />
-    <Compile Include="MusicGeneration\MusicGenerator.cs" />
-    <Compile Include="MusicFramework\MusicStream.cs" />
-    <Compile Include="MusicPlaying\MusicDispatcher.cs" />
-    <Compile Include="MusicPlaying\MusicDispatcherFactory.cs" />
-    <Compile Include="MusicPlaying\MusicPlayer.cs" />
-    <Compile Include="MusicPlaying\MusicPlayingFacade.cs" />
-    <Compile Include="MusicPlaying\MusicPlayingFacadeFactory.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Program.cs">
+      <SubType>
+      </SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIAbstraction\UIAbstractionFacade.cs" />
     <Compile Include="UIAbstraction\UIAbstractionFacadeFactory.cs" />
@@ -111,7 +85,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MusicZirconia\MusicZirconia.csproj">
+      <Project>{0a432c92-d8c5-44c5-b39b-26fccf0e94b7}</Project>
+      <Name>MusicZirconia</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

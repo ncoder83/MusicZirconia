@@ -1,0 +1,114 @@
+﻿using MusicZirconia.MusicFramework;
+using MusicZirconia.MusicFramework.TheoryFramework;
+
+namespace MusicZirconia.MusicGeneration.GeneratorFramework.PianoCreator
+{
+    public class DefaultPianoCreator : IMusicCreator
+    {
+        public void CreateMusic(MusicStream stream)
+        {
+            stream.PlayNotes(new Note(Key.B, 3, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.B, 3, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.B, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.B, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.A, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.A, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.A, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.A, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Half));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Half));
+            stream.IncrementTick(Duration.Half);
+            stream.PlayNotes(new Note(Key.A, 3, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.A, 4, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.A, 3, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.A, 4, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.A, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.A, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.A, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.A, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.AFlat, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.AFlat, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.AFlat, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.AFlat, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.E, 4, .7, Duration.Half));
+            stream.PlayNotes(new Note(Key.E, 5, .7, Duration.Half));
+            stream.IncrementTick(Duration.Half);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.E, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.E, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.E, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.E, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.B, 3, .7, Duration.Half));
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Half));
+            stream.IncrementTick(Duration.Half);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.E, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.E, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.B, 3, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.E, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.E, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.E, 4, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.E, 5, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.GFlat, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.GFlat, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.B, 3, .7, Duration.Half));
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Half));
+            stream.IncrementTick(Duration.Half);
+            stream.PlayNotes(new Note(Key.B, 3, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.B, 3, .7, Duration.Eighth));
+            stream.PlayNotes(new Note(Key.B, 4, .7, Duration.Eighth));
+            stream.IncrementTick(Duration.Eighth);
+            stream.PlayNotes(new Note(Key.D, 4, .7, Duration.Quarter));
+            stream.PlayNotes(new Note(Key.D, 5, .7, Duration.Quarter));
+            stream.IncrementTick(Duration.Quarter);
+            stream.PlayNotes(new Note(Key.D, 4, .7, Duration.Half));
+            stream.PlayNotes(new Note(Key.D, 5, .7, Duration.Half));
+            stream.IncrementTick(Duration.Half);
+        }
+    }
+}
