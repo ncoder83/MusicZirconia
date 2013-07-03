@@ -53,7 +53,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="LibTests\CSharpSynth\SynthHelperTests.cs" />
     <Compile Include="MidiIntegration\MidiIntegrationFacadeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

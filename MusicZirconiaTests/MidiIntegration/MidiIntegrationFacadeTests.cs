@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MusicGenerator.MidiIntegration;
+using MusicZirconia.MidiIntegration;
 
-namespace MusicGenerator.MidiIntegration.Test
+namespace MusicZirconia.MidiIntegration.Test
 {
     [TestClass()]
     public class MidiIntegrationFacadeTests
