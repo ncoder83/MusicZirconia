@@ -8,17 +8,17 @@ namespace MusicZirconia.MusicFramework
     public class MusicUnit : IComparable<MusicUnit>
     {
         public readonly int Tick;
-        private List<MidiSignal> midiSignals;
+        private List<IMidiSignal> midiSignals;
 
-        public IEnumerable<MidiSignal> Signals { get { return midiSignals; } }
+        public IEnumerable<IMidiSignal> Signals { get { return midiSignals; } }
 
-        public MusicUnit(int tick, List<MidiSignal> midiSignals)
+        public MusicUnit(int tick, List<IMidiSignal> midiSignals)
         {
             this.Tick = tick;
             this.midiSignals = midiSignals;
         }
 
-        public void AddSignal(MidiSignal signal)
+        public void AddSignal(IMidiSignal signal)
         {
             this.midiSignals.Add(signal);
         }

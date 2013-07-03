@@ -52,7 +52,7 @@
     <Compile Include="Common\DoubleExtensions.cs" />
     <Compile Include="GenerationFramework\StreamGenerator.cs" />
     <Compile Include="GenerationFramework\StreamGeneratorFactory.cs" />
-    <Compile Include="MidiIntegration\MidiSignals\MidiSignal.cs" />
+    <Compile Include="MidiIntegration\MidiSignals\IMidiSignal.cs" />
     <Compile Include="MidiIntegration\MidiSignals\NoteOffSignal.cs" />
     <Compile Include="MidiIntegration\MidiSignals\NoteOnSignal.cs" />
     <Compile Include="MidiIntegration\MidiSignals\SustainSignal.cs" />

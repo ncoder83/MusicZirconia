@@ -40,7 +40,7 @@ namespace MusicZirconia.MusicPlaying
             if (musicUnit == null)
                 return;
 
-            foreach(MidiSignal signal in musicUnit.Signals)
+            foreach(IMidiSignal signal in musicUnit.Signals)
             {
                 midiIntegrationFacade.FireSignal(signal);
             }

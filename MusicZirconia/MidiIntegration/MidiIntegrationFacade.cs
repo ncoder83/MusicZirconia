@@ -13,7 +13,7 @@ namespace MusicZirconia.MidiIntegration
             this.outputDevice = outputDevice;
         }
 
-        public void FireSignal(MidiSignal signal)
+        public void FireSignal(IMidiSignal signal)
         {
             signal.Fire(outputDevice, midiChannel);
         }

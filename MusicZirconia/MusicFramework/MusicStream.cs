@@ -32,17 +32,17 @@ namespace MusicZirconia.MusicFramework
             }
         }
 
-        public void SendSignal(MidiSignal signal)
+        public void SendSignal(IMidiSignal signal)
         {
             musicUnitMap.Add(musicUnitFactory.GetMusicUnit(tick, signal));
         }
 
-        public void SendDelayedSignal(MidiSignal signal, Duration duration)
+        public void SendDelayedSignal(IMidiSignal signal, Duration duration)
         {
             SendDelayedSignal(signal, (int)duration);
         }
 
-        public void SendDelayedSignal(MidiSignal signal, int duration)
+        public void SendDelayedSignal(IMidiSignal signal, int duration)
         {
             musicUnitMap.Add(musicUnitFactory.GetMusicUnit(tick + duration - 1, signal));
         }

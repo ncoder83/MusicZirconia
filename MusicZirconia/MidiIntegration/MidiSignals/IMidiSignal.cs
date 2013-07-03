@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusicZirconia.MidiIntegration.MidiSignals
 {
-    public interface MidiSignal
+    public interface IMidiSignal
     {
         void Fire(OutputDevice outputDevice, Midi.Channel midiChannel);
     }

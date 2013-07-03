@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicZirconia.MidiIntegration.MidiSignals
 {
-    class SustainSignal : MidiSignal
+    class SustainSignal : IMidiSignal
     {
         private readonly int sustain;
 

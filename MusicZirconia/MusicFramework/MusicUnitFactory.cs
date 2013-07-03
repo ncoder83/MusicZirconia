@@ -9,9 +9,9 @@ namespace MusicZirconia.MusicFramework
 {
     public class MusicUnitFactory
     {
-        public MusicUnit GetMusicUnit(int tick, params MidiSignal[] signals)
+        public MusicUnit GetMusicUnit(int tick, params IMidiSignal[] signals)
         {
-            return new MusicUnit(tick, new List<MidiSignal>(signals));
+            return new MusicUnit(tick, new List<IMidiSignal>(signals));
         }
     }
 }

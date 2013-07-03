@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusicZirconia.MidiIntegration.MidiSignals
 {
-    public class NoteOnSignal : MidiSignal
+    public class NoteOnSignal : IMidiSignal
     {
         private readonly Midi.Pitch pitch;
         private readonly int velocity;
