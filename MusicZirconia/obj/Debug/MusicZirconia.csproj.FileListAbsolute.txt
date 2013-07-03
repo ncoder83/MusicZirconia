@@ -1,8 +1,0 @@
-D:\Projects\MusicZirconia\MusicZirconia\bin\Debug\MusicZirconia.dll.config
-D:\Projects\MusicZirconia\MusicZirconia\bin\Debug\MusicZirconia.dll
-D:\Projects\MusicZirconia\MusicZirconia\bin\Debug\MusicZirconia.pdb
-D:\Projects\MusicZirconia\MusicZirconia\bin\Debug\Midi.dll
-D:\Projects\MusicZirconia\MusicZirconia\obj\Debug\MusicZirconia.Properties.Resources.resources
-D:\Projects\MusicZirconia\MusicZirconia\obj\Debug\MusicZirconia.csproj.GenerateResource.Cache
-D:\Projects\MusicZirconia\MusicZirconia\obj\Debug\MusicZirconia.dll
-D:\Projects\MusicZirconia\MusicZirconia\obj\Debug\MusicZirconia.pdb
