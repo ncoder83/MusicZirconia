@@ -1,5 +1,5 @@
 ﻿using MusicZirconia.Common;
-using MusicZirconia.MusicFramework.TheoryFramework;
+using MusicZirconia.MusicFramework.MusicStructures;
 using System.Collections.Generic;
 
 namespace MusicZirconia.MusicFramework

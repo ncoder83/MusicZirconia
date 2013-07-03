@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicZirconia.MusicFramework.TheoryFramework
+namespace MusicZirconia.MusicFramework.MusicStructures
 {
     public enum Key
     {

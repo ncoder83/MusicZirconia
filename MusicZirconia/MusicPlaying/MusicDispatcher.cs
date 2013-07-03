@@ -1,6 +1,6 @@
 ﻿using MusicZirconia.MidiIntegration;
 using MusicZirconia.MusicFramework;
-using MusicZirconia.MusicFramework.TheoryFramework;
+using MusicZirconia.MusicFramework.MusicStructures;
 using System.Timers;
 using System;
 using MusicZirconia.MidiIntegration.MidiSignals;

@@ -1,4 +1,5 @@
-﻿using MusicZirconia.MusicGeneration;
+﻿using MusicGenerator.GenerationFramework;
+using MusicZirconia.MusicGeneration;
 using MusicZirconia.MusicPlaying;
 
 namespace MusicGenerator.UIAbstraction
@@ -7,7 +8,8 @@ namespace MusicGenerator.UIAbstraction
     {
         public UIAbstractionFacade getUIAbstractionFacade()
         {
-            StreamGenerator musicGenerator = new StreamGeneratorFactory().GetStreamGenerator();
+            DefaultPianoCreator pianoCreator = new DefaultPianoCreator();
+            StreamGenerator musicGenerator = new StreamGeneratorFactory().GetStreamGenerator(pianoCreator);
             MusicPlayingFacade musicPlayingFacade = new MusicPlayingFacadeFactory(musicGenerator).getMusicPlayingFacade();
             return new UIAbstractionFacade(musicGenerator, musicPlayingFacade);
         }

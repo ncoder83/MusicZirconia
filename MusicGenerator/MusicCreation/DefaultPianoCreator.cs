@@ -1,7 +1,8 @@
-﻿using MusicZirconia.MusicFramework;
-using MusicZirconia.MusicFramework.TheoryFramework;
+﻿using MusicZirconia.GenerationFramework;
+using MusicZirconia.MusicFramework;
+using MusicZirconia.MusicFramework.MusicStructures;
 
-namespace MusicZirconia.GenerationFramework
+namespace MusicGenerator.GenerationFramework
 {
     public class DefaultPianoCreator : IMusicCreator
     {

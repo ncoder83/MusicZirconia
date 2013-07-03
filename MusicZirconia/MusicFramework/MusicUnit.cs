@@ -1,5 +1,5 @@
 ﻿using MusicZirconia.MidiIntegration.MidiSignals;
-using MusicZirconia.MusicFramework.TheoryFramework;
+using MusicZirconia.MusicFramework.MusicStructures;
 using System;
 using System.Collections.Generic;
 
