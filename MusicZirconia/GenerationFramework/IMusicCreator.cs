@@ -1,6 +1,6 @@
 ﻿using MusicZirconia.MusicFramework;
 
-namespace MusicZirconia.MusicGeneration.GeneratorFramework
+namespace MusicZirconia.GenerationFramework
 {
     public interface IMusicCreator
     {

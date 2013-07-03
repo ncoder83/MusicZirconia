@@ -1,6 +1,6 @@
-﻿using MusicZirconia.MusicGeneration.GeneratorFramework.PianoCreator;
+﻿using MusicZirconia.GenerationFramework;
 
-namespace MusicZirconia.MusicGeneration.GeneratorFramework
+namespace MusicZirconia.GenerationFramework
 {
     public class MusicCreatorFactory
     {

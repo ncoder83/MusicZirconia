@@ -7,9 +7,9 @@ namespace MusicGenerator.UIAbstraction
     {
         public UIAbstractionFacade getUIAbstractionFacade()
         {
-            MusicGenerationFacade  musicGenerationFacade = new MusicGenerationFacadeFactory().getMusicGenerationFacade();
-            MusicPlayingFacade musicPlayingFacade = new MusicPlayingFacadeFactory(musicGenerationFacade).getMusicPlayingFacade();
-            return new UIAbstractionFacade(musicGenerationFacade, musicPlayingFacade);
+            StreamGenerator musicGenerator = new StreamGeneratorFactory().GetStreamGenerator();
+            MusicPlayingFacade musicPlayingFacade = new MusicPlayingFacadeFactory(musicGenerator).getMusicPlayingFacade();
+            return new UIAbstractionFacade(musicGenerator, musicPlayingFacade);
         }
     }
 }

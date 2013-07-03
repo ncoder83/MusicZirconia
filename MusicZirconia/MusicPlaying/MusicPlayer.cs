@@ -1,5 +1,4 @@
-﻿using MusicZirconia.MusicGeneration;
-using MusicZirconia.MusicFramework;
+﻿using MusicZirconia.MusicFramework;
 
 namespace MusicZirconia.MusicPlaying
 {

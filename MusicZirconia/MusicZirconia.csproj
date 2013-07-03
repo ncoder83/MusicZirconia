@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\DoubleExtensions.cs" />
+    <Compile Include="GenerationFramework\StreamGenerator.cs" />
+    <Compile Include="GenerationFramework\StreamGeneratorFactory.cs" />
     <Compile Include="MidiIntegration\MidiSignals\MidiSignal.cs" />
     <Compile Include="MidiIntegration\MidiSignals\NoteOffSignal.cs" />
     <Compile Include="MidiIntegration\MidiSignals\NoteOnSignal.cs" />
@@ -65,14 +67,11 @@
     <Compile Include="MusicFramework\TheoryFramework\Key.cs" />
     <Compile Include="MusicFramework\TheoryFramework\Note.cs" />
     <Compile Include="MusicFramework\TheoryFramework\Pitch.cs" />
-    <Compile Include="MusicGeneration\GeneratorFramework\IMusicCreator.cs" />
-    <Compile Include="MusicGeneration\GeneratorFramework\MusicCreatorFactory.cs" />
-    <Compile Include="MusicGeneration\GeneratorFramework\PianoCreator\DefaultPianoCreator.cs" />
+    <Compile Include="GenerationFramework\IMusicCreator.cs" />
+    <Compile Include="GenerationFramework\MusicCreatorFactory.cs" />
+    <Compile Include="GenerationFramework\DefaultPianoCreator.cs" />
     <Compile Include="MusicFramework\MusicStreamFactory.cs" />
     <Compile Include="MusicFramework\MusicUnit.cs" />
-    <Compile Include="MusicGeneration\MusicGenerationFacade.cs" />
-    <Compile Include="MusicGeneration\MusicGenerationFacadeFactory.cs" />
-    <Compile Include="MusicGeneration\MusicGenerator.cs" />
     <Compile Include="MusicFramework\MusicStream.cs" />
     <Compile Include="MusicPlaying\MusicDispatcher.cs" />
     <Compile Include="MusicPlaying\MusicDispatcherFactory.cs" />

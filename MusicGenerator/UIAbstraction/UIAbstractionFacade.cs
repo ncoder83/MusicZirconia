@@ -6,12 +6,13 @@ namespace MusicGenerator.UIAbstraction
 {
     public class UIAbstractionFacade
     {
-        private MusicGenerationFacade musicGenerationFacade;
+        private StreamGenerator musicGenerator;
         private MusicPlayingFacade musicPlayingFacade;
         private MusicStream musicStream;
 
-        public UIAbstractionFacade(MusicGenerationFacade musicGenerationFacade, MusicPlayingFacade musicPlayingFacade){
-            this.musicGenerationFacade = musicGenerationFacade;
+        public UIAbstractionFacade(StreamGenerator musicGenerator, MusicPlayingFacade musicPlayingFacade)
+        {
+            this.musicGenerator = musicGenerator;
             this.musicPlayingFacade = musicPlayingFacade;
             this.musicStream = null;
         }
@@ -19,7 +20,7 @@ namespace MusicGenerator.UIAbstraction
         public void play()
         {
             if (musicStream == null || musicStream.IsEmpty)
-                musicStream = musicGenerationFacade.Generate();
+                musicStream = musicGenerator.Generate();
 
             musicPlayingFacade.play(musicStream);
         }

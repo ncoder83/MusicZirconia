@@ -5,11 +5,11 @@ namespace MusicZirconia.MusicPlaying
 {
     public class MusicPlayingFacadeFactory
     {
-        private MusicGenerationFacade musicGenerationFacade;
+        private StreamGenerator musicGenerator;
 
-        public MusicPlayingFacadeFactory(MusicGenerationFacade musicGenerationFacade)
+        public MusicPlayingFacadeFactory(StreamGenerator musicGenerator)
         {
-            this.musicGenerationFacade = musicGenerationFacade;
+            this.musicGenerator = musicGenerator;
         }
 
         public MusicPlayingFacade getMusicPlayingFacade()

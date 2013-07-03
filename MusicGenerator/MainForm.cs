@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace MusicGenerator
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         UIAbstractionFacade uiAbstractionFacade;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             uiAbstractionFacade = new UIAbstractionFacadeFactory().getUIAbstractionFacade();

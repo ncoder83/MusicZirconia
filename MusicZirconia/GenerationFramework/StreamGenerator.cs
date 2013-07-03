@@ -1,15 +1,14 @@
-﻿using MusicZirconia.MusicGeneration.GeneratorFramework;
-using MusicZirconia.MusicFramework;
-
+﻿using MusicZirconia.MusicFramework;
+using MusicZirconia.GenerationFramework;
 
 namespace MusicZirconia.MusicGeneration
 {
-    public class MusicGenerator
+    public class StreamGenerator
     {
         private MusicStreamFactory musicStreamFactory;
         private IMusicCreator musicCreator;
 
-        public MusicGenerator(MusicStreamFactory musicStreamFactory, IMusicCreator musicCreator)
+        public StreamGenerator(MusicStreamFactory musicStreamFactory, IMusicCreator musicCreator)
         {
             this.musicStreamFactory = musicStreamFactory;
             this.musicCreator = musicCreator;
